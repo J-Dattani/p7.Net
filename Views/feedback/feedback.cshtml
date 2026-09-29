@@ -1,0 +1,38 @@
+﻿@model p7.Models.feedback
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Rating)
+                @Html.TextBox(m => m.Rating)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Message)
+                @Html.TextAreaFor(m => m.Message)
+            </div>
+
+            <button type="submit">Submit</button>
+        }
+    </div>
+</body>
+</html>
